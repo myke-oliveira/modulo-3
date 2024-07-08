@@ -1,0 +1,33 @@
+meta {
+  name: UPDATE TASK
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/tasks/aeebecd6-c5d5-4d2d-9085-c9278989edb2
+  body: none
+  auth: none
+}
+
+docs {
+  # Feature
+  
+  Get all salved tasks.
+  
+  # Usage
+  
+  GET /tasks
+  
+  # Result
+  
+  ```json
+  {
+    "tasks": [],
+    "total_tasks": 0
+  }
+  ```
+  
+  
+  
+}

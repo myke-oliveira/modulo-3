@@ -1,0 +1,49 @@
+meta {
+  name: CREATE TASK
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/tasks
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Estudar Python",
+    "description": "Python 3"
+  }
+}
+
+docs {
+  # Feature
+  
+  Create and save a new task
+  
+  # Usage
+  
+  POST /tasks
+  
+  ## Body
+  
+  ```json
+  {
+    "title": "Title of the task",
+    "description": "Description of the task"
+  }
+  ```
+  
+  # Result
+  
+  ```json
+  {
+    "tasks": [],
+    "total_tasks": 0
+  }
+  ```
+  
+  
+  
+}

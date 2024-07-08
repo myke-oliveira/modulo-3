@@ -1,0 +1,33 @@
+meta {
+  name: DELETE TASK
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/tasks/6aa0ec41-45ec-48ce-81a6-eb424bd0eee0
+  body: none
+  auth: none
+}
+
+docs {
+  # Feature
+  
+  Get all salved tasks.
+  
+  # Usage
+  
+  GET /tasks
+  
+  # Result
+  
+  ```json
+  {
+    "tasks": [],
+    "total_tasks": 0
+  }
+  ```
+  
+  
+  
+}

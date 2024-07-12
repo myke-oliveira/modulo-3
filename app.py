@@ -40,12 +40,14 @@ def create_task():
 def update_task(task_id):
     data = request.get_json()
     task = next(filter(lambda task: task.id == task_id, tasks), None)
-    if task:
-        task.title = data["title"]
-        task.description = data["description"]
-        task.completed = data["completed"]
-        return jsonify(task.to_dict())
-    return jsonify({"message": "Task not found"}), 404
+
+    if not task:
+        return jsonify({"message": "Task not found"}), 404
+    
+    task.title = data["title"]
+    task.description = data["description"]
+    task.completed = data["completed"]
+    return jsonify(task.to_dict())
 
 @app.route("/tasks/<uuid(strict=False):task_id>", methods=["DELETE"])
 def delete_task(task_id):

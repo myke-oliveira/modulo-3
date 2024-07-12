@@ -4,10 +4,18 @@ meta {
   seq: 4
 }
 
-get {
-  url: {{base_url}}/tasks/aeebecd6-c5d5-4d2d-9085-c9278989edb2
-  body: none
+put {
+  url: {{base_url}}/tasks/fe54e34f-cc72-48af-970f-12eabfa1edf8
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "title": "Estudar Cálculo Integral e Diferencial",
+    "description":"Estudar equações diferenciais oridinárias",
+    "completed": false
+  }
 }
 
 docs {
